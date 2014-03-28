@@ -24,8 +24,8 @@ public class DrakonServer {
 		SshServer sshServer = SshServer.setUpDefaultServer();
 		sshServer.setPort(5180);
 
-		sshServer.setPasswordAuthenticator(new DrakonPasswordAuthenticator());
 		sshServer.setPublickeyAuthenticator(new DrakonPublickeyAuthenticator());
+		sshServer.setPasswordAuthenticator(new DrakonPasswordAuthenticator());
 
 		// String hostKey = System.getProperty("java.io.tmpdir") +
 		// "/drakon.hostKey";
