@@ -1,0 +1,33 @@
+{
+	"id": 1,
+	"name", "Gods",
+	"reset_message": "A low humming noise can be heard.",
+	"room_links":[
+		{
+			"area_id": 1,
+			"room_id": 1200,
+			"exits": {
+				"north": 1201
+			}
+		},
+		{
+			"area_id": 1,
+			"room_id": 1201,
+			"exits": {
+				"south": 1200
+			}
+		}
+	],
+	"item_spawn":[
+		{
+			"room_id": 1201,
+			"items": [1200]
+		}
+	],
+	"mob_spawn": [
+		{
+			"room_id": 1200,
+			"mobs": [1200]
+		}
+	]
+}

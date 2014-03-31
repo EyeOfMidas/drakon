@@ -1,0 +1,8 @@
+[
+	{
+		"id": 1200,
+		"match": ["mobile"],
+		"singular": "a mobile",
+		"present": "A mobile is here."
+	}
+]

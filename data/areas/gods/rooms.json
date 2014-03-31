@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1200,
+		"name": "The Parlour of the Immortals",
+		"description": "You are lounging in a quiet cozy parlour, warmed by a gentle magical fire which twinkles happily in a warm fireplace.",
+		"decorations": []
+	},
+	{
+		"id": 1201,
+		"name": "Thoric's Den",
+		"description": "You find yourself in a cozy little room.\nThis is the place where Thoric comes to relax, and get inspired!\nLooking around yourself, you find this to be quite a comfortable, medieval room, which seems to be inside some sort of log cabin.  There's a very nice-looking leather chair here in front of a huge fireplace, with a good blaze going. On the mantle you see a fine assortment of pipes, and a couple jars of high quality pipeweed.\nOn the floor you spot a full bear-skin rug in front of the fireplace, and you suddenly get the urge to make yourself comfortable in front of the fire with a mug of hot coffee, fill a pipe up with some pipeweed, relax and listen to tales of days long past."
+		"decorations": [
+			{
+				"name": "fireplace",
+				"description": "The fireplace contains a nice warm fire.",
+				"match": ["fireplace"]
+			},
+			{
+				"name": "rug",
+				"description": "It sure does look inviting.",
+				"match": ["rug"]
+			},
+			{
+				"name": "chair",
+				"description": "It looks very comfortable",
+				"match": ["chair"]
+			}
+		]
+	}
+]

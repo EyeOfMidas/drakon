@@ -1,0 +1,13 @@
+[
+	{
+		id: 1,
+		string: ["quit", "exit"],
+		description: "Disconnect from the server."
+		
+	},
+	{
+		id: 2,
+		string: ["look", "l"],
+		description: "Display a description of the current room and surroundings."
+	}
+]
