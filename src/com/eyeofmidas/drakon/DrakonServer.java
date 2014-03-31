@@ -8,8 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.eyeofmidas.drakon.auth.DrakonPasswordAuthenticator;
-import com.eyeofmidas.drakon.auth.DrakonPublickeyAuthenticator;
-import com.eyeofmidas.drakon.commands.CommandFactory;
+import com.eyeofmidas.drakon.commands.DrakonShellFactory;
 
 public class DrakonServer {
 	private Logger logger;
@@ -21,19 +20,14 @@ public class DrakonServer {
 	}
 
 	public static SshServer getDefaultDrakonSshServer() {
-		SshServer sshServer = SshServer.setUpDefaultServer();
-		sshServer.setPort(5180);
-
-		sshServer.setPublickeyAuthenticator(new DrakonPublickeyAuthenticator());
-		sshServer.setPasswordAuthenticator(new DrakonPasswordAuthenticator());
-
-		// String hostKey = System.getProperty("java.io.tmpdir") +
-		// "/drakon.hostKey";
 		String hostKey = "cert/drakon.keystore";
-
+		int port = 5180;
+		SshServer sshServer = SshServer.setUpDefaultServer();
+		sshServer.setPort(port);
 		sshServer.setKeyPairProvider(new SimpleGeneratorHostKeyProvider(hostKey));
-		sshServer.setShellFactory(new CommandFactory());
-
+		sshServer.setShellFactory(new DrakonShellFactory());
+		sshServer.setPasswordAuthenticator(new DrakonPasswordAuthenticator());
+		// sshServer.setPublickeyAuthenticator(new DrakonPublickeyAuthenticator());
 		return sshServer;
 
 	}
