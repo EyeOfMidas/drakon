@@ -13,9 +13,7 @@ public class EchoShell implements Command, Runnable {
 
 	private InputStream inputStream;
 	private OutputStream outputStream;
-	private OutputStream errorOutputStream;
 	private ExitCallback exitCallback;
-	private Environment environment;
 	private Thread thread;
 	private StringBuffer inputBuffer;
 	private PrintWriter printOutputStream;
@@ -32,7 +30,6 @@ public class EchoShell implements Command, Runnable {
 
 	@Override
 	public void setErrorStream(OutputStream out) {
-		errorOutputStream = out;
 
 	}
 
@@ -59,7 +56,6 @@ public class EchoShell implements Command, Runnable {
 
 	@Override
 	public void start(Environment env) throws IOException {
-		environment = env;
 		thread = new Thread(this, "EchoShell");
 		thread.start();
 	}
@@ -75,17 +71,17 @@ public class EchoShell implements Command, Runnable {
 					inputBuffer = new StringBuffer();
 				} else if (read == '\u007f') {
 					printOutputStream.print("\b \b");
-					if(inputBuffer.length() >= 1) {
+					if (inputBuffer.length() >= 1) {
 						inputBuffer.deleteCharAt(inputBuffer.length() - 1);
 					}
 				} else if (read == '\u0003') {
-					printOutputStream.print("^C");
+					return;
 				} else {
 					inputBuffer.append(read);
 					printOutputStream.print(read);
 				}
 				printOutputStream.flush();
-				if ("quit".equals(command) || read == '\u0003') {
+				if ("quit".equals(command)) {
 					return;
 				}
 			}

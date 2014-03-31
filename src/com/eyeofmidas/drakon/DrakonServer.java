@@ -14,9 +14,9 @@ public class DrakonServer {
 	private Logger logger;
 	private SshServer server;
 
-	public DrakonServer(SshServer inServer, Logger inLogger) {
-		this.server = inServer;
-		this.logger = inLogger;
+	public DrakonServer() {
+		this.server = DrakonServer.getDefaultDrakonSshServer();
+		this.logger = DrakonServer.getDefaultDrakonLogger();
 	}
 
 	public static SshServer getDefaultDrakonSshServer() {
