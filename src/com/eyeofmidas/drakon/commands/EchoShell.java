@@ -81,7 +81,7 @@ public class EchoShell implements Command, Runnable {
 					printOutputStream.print(read);
 				}
 				printOutputStream.flush();
-				if ("quit".equals(command)) {
+				if ("quit".equals(command) || "exit".equals(command)) {
 					return;
 				}
 			}
