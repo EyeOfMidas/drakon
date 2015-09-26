@@ -44,6 +44,8 @@ public class UserFileReader {
 				currentUser.setPassword(reader.nextString());
 			} else if (key.equals("email")) {
 				currentUser.setEmail(reader.nextString());
+			} else if (key.equals("public_key")) {
+				currentUser.setPublicKey(reader.nextString());
 			} else {
 				reader.skipValue();
 			}

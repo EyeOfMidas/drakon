@@ -4,6 +4,7 @@
 		"name": "admin",
 		"password": "admin",
 		"password": "d033e22ae348aeb5660fc2140aec35850c4da997",
-		"email": "admin@localhost"
+		"email": "admin@localhost",
+		"public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbrOMTcwtU3Xegc5uzqsCE68ASHBnQnYtUYQntFOtiuwX9LkYB1w/uuETrdqV5lTh0QiMNVjlDNru9pVbZpjvbJpzbf35dLyMP+YYXodZsy2lRhkuN3nf+pi4DWNfqjQ2DksNLW4xu7NG7gT10VSwxP1ts12cIvCECkiiyaIuZZTByIEd1hehVdP7YENxX4na6t0M0v00Duh8NjFol4l5pKm+KZQd/vHK8gwDIW6dAez+qEpzkanDvH99qAYOp/QyHvjD/LRi1//qka9qa3OJbXtzC/Jua6kj1XlZ2zRjWr4+SCe0BxCQiTPYVv4DFSTZ1QKwUZhXBCIkoJS/w0FiZ eyeofmidas@gmail.com"
 	}
 ]

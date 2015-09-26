@@ -7,7 +7,7 @@ public class DrakonShellFactory implements Factory<Command> {
 
 	@Override
 	public Command create() {
-		return new EchoShell();
+		return new DungeonShell();
 	}
 
 }
